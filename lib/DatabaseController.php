@@ -1,5 +1,4 @@
 <?php
-
 // クラス役割: DB接続・各種クエリの準備実行・結果データ成形
 // コンストラクタ引数: DB名（必須）、ホスト名、DBユーザー名、DBパスワード
 // 処理内容: コンストラクタでDBの接続を確立、下記メソッドの実行
@@ -112,6 +111,7 @@ class DatabaseController {
      * SELECT文の実行用メソッド（大量レコードの取得）
      * 結果を1行ずつ取得できるイテレータを返却
      * CSV出力やAPIデータ通信向け
+     * @@@@@@@@@テスト中@@@@@@@@@@@@@@@
      */
     public function selectEach($sql, $params = null) {
         $stmt = $this->execute($sql, $params);
@@ -128,6 +128,7 @@ class DatabaseController {
      * SELECT文の実行用メソッド（大量レコードの取得）
      * 実行結果を1行ずつコールバック関数で処理
      * バッチ処理やデータ移行向け
+     * @@@@@@@@@テスト中@@@@@@@@@@@@@@@
      */
     public function selectWithCallback($sql, $params, callable $callback) {
         $stmt = $this->execute($sql, $params);

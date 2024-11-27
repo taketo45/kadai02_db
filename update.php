@@ -1,6 +1,7 @@
 <?php
-require_once 'config.php';
+require_once('../../appconfig/config.php');
 
+require_once('lib/DatabaseInfo.php');
 require_once('lib/DatabaseController.php');
 
 //エラー表示
