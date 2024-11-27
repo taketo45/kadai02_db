@@ -5,7 +5,7 @@ require_once('lib/DatabaseController.php');
 
 //エラー表示
 ini_set("display_errors", 1);
-$isDebug = IS_DEBUG;
+$isDebug = true;
 
 $quely = $_POST['query'];
 $param = $_POST['param'];
